@@ -36,10 +36,18 @@ function ResultAddedDictionary()
  
 }
 ResultAddedDictionary
-
 for (( i=0; i<=3; i++ ))
 do
 	ResultArray[(($i))]="${resultDictionary[$i]}"
 done
 
+
+function Descendingsort()
+{
+	sort=$( printf "%s\n" ${ResultArray[@]} | sort -nr )
+}
+Descendingsort
+
 echo ${ResultArray[@]}
+
+echo $sort
