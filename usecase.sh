@@ -4,4 +4,8 @@ read -p "Enter value of b : " b
 read -p "Enter value of c : " c
 
 ans=$((a+b*c))
-echo "$a + $b *$c = $ans"
+echo "$a + $b * $c = $ans"
+
+ans=$((c+a/b))
+echo "$c + $a / $b =$ans "
+
