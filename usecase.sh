@@ -37,3 +37,9 @@ function ResultAddedDictionary()
 }
 ResultAddedDictionary
 
+for (( i=0; i<=3; i++ ))
+do
+	ResultArray[(($i))]="${resultDictionary[$i]}"
+done
+
+echo ${ResultArray[@]}
