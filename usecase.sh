@@ -3,15 +3,6 @@ read -p "Enter value of a : " a
 read -p "Enter value of b : " b
 read -p "Enter value of c : " c
 
-ans=$((a+b*c))
-echo "$a + $b * $c = $ans"
-
-ans1=$((c+a/b))
-echo "$c + $a / $b =$ans1"
-
-ans2=$((a%b+c))
-echo="$a % $b + $c=$ans2"
-
 function operation()
 {
     result=$(($1+$2*$3))
