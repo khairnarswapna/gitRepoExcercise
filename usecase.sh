@@ -1,4 +1,7 @@
 #!/bin/bash -x
+
+declare  -A resultDictinary
+
 read -p "Enter value of a : " a 
 read -p "Enter value of b : " b
 read -p "Enter value of c : " c
@@ -21,12 +24,16 @@ function operation3()
      echo $result
 }
 
-result1="$( operation $(($a)) $(($b)) $(($c)) )"
-result2="$( operation2 $(($a)) $(($b)) $(($c)) )"
-result3="$( operation3 $(($a)) $(($b)) $(($c)) )"
+echo "$( operation $(($a)) $(($b)) $(($c)) )"
+echo "$( operation2 $(($a)) $(($b)) $(($c)) )"
+echo "$( operation3 $(($a)) $(($b)) $(($c)) )"
 
-echo $result1
-echo $result2
-echo $result3
-
+function ResultAddedDictionary()
+{
+	resultDictionary["1"]="$( operation $a $b $c )"
+	resultDictionary["2"]="$( operation2 $a $b $c )"
+	resultDictionary["3"]="$( operation3 $a $b $c )"
+ 
+}
+ResultAddedDictionary
 
